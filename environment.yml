@@ -1,0 +1,14 @@
+name: solar-across-cmip
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python==3.11
+  - jupyter
+  - jupytext
+  - matplotlib
+  - netCDF4
+  - numpy
+  - pandas
+  - pooch
+  - xarray
