@@ -142,6 +142,12 @@ pl.plot(cmip5_forcing, label='CMIP5 TSI')
 pl.plot(np.arange(1850.5, 2300), cmip6_forcing, label='CMIP6 TSI')
 pl.plot(np.arange(1850.5, 2024), cmip7_forcing, label='CMIP7 TSI')
 pl.xlim(1850, 2023)
+pl.ylabel("W m$^{-2}$")
+pl.legend()
+pl.tight_layout()
+
+os.makedirs('../plots', exist_ok=True)
+pl.savefig('../plots/solar_erf_across_cmips.png')
 
 # %%
 cmip5_forcing.loc[1849.5:]

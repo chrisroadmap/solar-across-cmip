@@ -4,6 +4,9 @@
 # large datafiles from input4MIPs
 data/
 
+# plots
+plots/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
