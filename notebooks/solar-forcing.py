@@ -150,6 +150,20 @@ os.makedirs('../plots', exist_ok=True)
 pl.savefig('../plots/solar_erf_across_cmips.png')
 
 # %%
+fig = pl.figure(figsize=(11/2.54, 11/2.54))
+pl.plot(cmip5_forcing, label='CMIP5 TSI')
+pl.plot(np.arange(1850.5, 2300), cmip6_forcing, label='CMIP6 TSI')
+pl.plot(np.arange(1850.5, 2024), cmip7_forcing, label='CMIP7 TSI')
+pl.xlim(1995, 2023)
+pl.ylabel("W m$^{-2}$")
+pl.title("Solar ERF")
+pl.legend()
+pl.tight_layout()
+
+os.makedirs('../plots', exist_ok=True)
+pl.savefig('../plots/solar_erf_across_cmips_1995-2023.png')
+
+# %%
 cmip5_forcing.loc[1849.5:]
 
 # %%
